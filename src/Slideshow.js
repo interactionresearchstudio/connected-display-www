@@ -1,8 +1,7 @@
-import './App.css'
+import { useEffect, useState } from "react"
 import axios from 'axios'
-import { useEffect, useState } from 'react';
 
-function App() {
+function Slideshow(props) {
   const [devices, setDevices] = useState([])
   const [deviceIndex, setDeviceIndex] = useState(0)
 
@@ -27,7 +26,7 @@ function App() {
     return () => clearInterval(interval)
   }, [deviceIndex])
 
-  return (
+  return(
     <div
       className={`w-[100vw] h-[100vh]`}
     >
@@ -35,6 +34,7 @@ function App() {
       <div className='absolute bottom-4 left-4 bg-white p-2'><h1>{devices[deviceIndex]}</h1></div>
     </div>
   )
+
 }
 
-export default App
+export default Slideshow
