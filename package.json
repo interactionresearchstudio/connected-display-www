@@ -2,7 +2,7 @@
   "name": "connected-display-www",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://interactionresearchstudio.github.com/connected-display-www",
+  "homepage": "http://connectedstudio.co.uk",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
