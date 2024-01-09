@@ -3,7 +3,6 @@ import axios from 'axios'
 
 function Grid(props) {
   const [devices, setDevices] = useState([])
-  const [deviceIndex, setDeviceIndex] = useState(0)
 
   useEffect(() => {
     // Get devices
