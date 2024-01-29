@@ -28,9 +28,9 @@ function Slideshow(props) {
 
   return(
     <div
-      className={`w-[100vw] h-[100vh]`}
+      className={`w-[100vw] h-[100vh] relative overflow-hidden`}
     >
-      <img className='block w-full h-full object-cover' src={`http://irs-iot.ddns.net/uploads/${devices[deviceIndex]}/latest`} alt=""/>
+      <img className='w-[1000px] -rotate-90 object-cover' src={`http://irs-iot.ddns.net/uploads/${devices[deviceIndex]}/latest`} alt=""/>
       <div className='absolute bottom-4 left-4 bg-white p-2'><h1>{devices[deviceIndex]}</h1></div>
     </div>
   )

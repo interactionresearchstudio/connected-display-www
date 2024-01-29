@@ -15,9 +15,14 @@ function Grid(props) {
 
   return(
     <div
-      className={``}
+      className={`m-10 md:m-20 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 md:gap-20 items-center`}
     >
-      {devices.map(d => <img className='' src={`http://irs-iot.ddns.net/uploads/${d}/latest`} alt=""/>)}
+      {devices.map(d => 
+        <div>
+          <img className='' src={`http://irs-iot.ddns.net/uploads/${d}/latest`} alt=""/>
+          <h1>{d}</h1>
+        </div>
+      )}
     </div>
   )
 
