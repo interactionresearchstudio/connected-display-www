@@ -10,6 +10,11 @@ function Slideshow(props) {
     axios.get('http://irs-iot.ddns.net/devices')
       .then((res) => {
         console.log(res.data)
+        // Remove manual device
+        let index = res.data.indexOf('manual');
+        if (index !== -1) {
+          res.data.splice(index, 1);
+        }
         setDevices(res.data)
       })
   }, [])
@@ -22,7 +27,7 @@ function Slideshow(props) {
       else {
         setDeviceIndex(deviceIndex + 1)
       }
-    }, 5000)
+    }, 8000)
     return () => clearInterval(interval)
   }, [deviceIndex])
 
