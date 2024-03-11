@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import axios from 'axios'
 
-const imageHost = 'https://interactionresearchstudio.net'
+//const imageHost = 'https://interactionresearchstudio.net'
+const imageHost = 'http://irs-iot.ddns.net'
 
 function Slideshow(props) {
   const [devices, setDevices] = useState([])
