@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react"
 import axios from 'axios'
 
+const imageHost = 'https://interactionresearchstudio.net'
+
 function Grid(props) {
   const [devices, setDevices] = useState([])
 
   useEffect(() => {
     // Get devices
-    axios.get('http://irs-iot.ddns.net/devices')
+    axios.get(`${imageHost}/devices/`)
       .then((res) => {
         console.log(res.data)
         // Remove manual device
@@ -22,9 +24,9 @@ function Grid(props) {
     <div
       className={`m-10 md:m-20 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 md:gap-20 items-center`}
     >
-      {devices.map(d => 
-        <div>
-          <img className='' src={`http://irs-iot.ddns.net/uploads/${d}/latest`} alt=""/>
+      {devices.map((d, index) => 
+        <div key={index}>
+          <img className='' src={`${imageHost}/uploads/${d}/latest`} alt=""/>
           <h1>{d}</h1>
         </div>
       )}
